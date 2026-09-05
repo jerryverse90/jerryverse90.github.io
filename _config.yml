@@ -1,0 +1,27 @@
+# GitHub Pages(Jekyll) 설정 — 값만 바꾸면 됨
+title: "Jonine"
+tagline: "LS ELECTRIC · 미쓰비시 · 야스카와 · 현대로보틱스를 한 라인에서 통합해 본 엔지니어의 실무 기록"
+author: "Jonine"
+email: ""                          # 공개용 연락처 (통신판매업 신고 시 필수 표시 항목)
+url: "https://jerryverse90.github.io"
+baseurl: ""                        # 프로젝트 페이지면 "/repo-name"
+lang: ko
+
+stibee_form_url: ""                # 스티비 구독 폼 URL (설정 → 구독 폼 → 링크). 비우면 버튼 숨김
+linkedin_url: ""
+github_url: "https://github.com/jerryverse90"
+
+permalink: /:year/:month/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
+timezone: Asia/Seoul
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post", verified: false }
+
+exclude: [README.md, drafts, Gemfile, Gemfile.lock, vendor]
+plugins: [jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
