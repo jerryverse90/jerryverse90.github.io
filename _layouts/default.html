@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}">글</a>
+    <a href="{{ '/series/' | relative_url }}">시리즈</a>
+    <a href="{{ '/about/' | relative_url }}">소개</a>
+    <a href="{{ '/corrections/' | relative_url }}">정정 이력</a>
+    {% if site.stibee_form_url != "" %}<a class="cta" href="{{ site.stibee_form_url }}" target="_blank" rel="noopener">뉴스레터 구독</a>{% endif %}
+  </nav>
+</header>
+<main class="wrap">
+{{ content }}
+</main>
+<footer class="site-foot">
+  <p class="disclosure">이 사이트의 글 초안과 도식은 Claude의 보조를 받아 작성합니다. 모든 파라미터 값과 절차는 저자가 실기 또는 시뮬레이터로 확인한 뒤 발행합니다. 오류 제보는 48시간 내 확인하고 <a href="{{ '/corrections/' | relative_url }}">정정 이력</a>에 공개합니다.</p>
+  <p class="fine">© {{ site.time | date: "%Y" }} {{ site.author }}{% if site.email != "" %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %} · 본 사이트의 내용은 특정 고객사·프로젝트와 무관한 일반 사례입니다.</p>
+</footer>
+</body>
+</html>
