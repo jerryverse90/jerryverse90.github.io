@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-head">
+    {% if page.series %}<div class="eyebrow">{{ page.series }}{% if page.part %} · {{ page.part }}편{% endif %}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.verified %}<span class="badge ok">실기 검증 완료</span>{% else %}<span class="badge warn">검증 전 초안</span>{% endif %}
+      {% if page.equipment %}<span class="equip">{{ page.equipment }}</span>{% endif %}
+    </div>
+  </header>
+  {{ content }}
+  {% include subscribe.html %}
+  {% if page.corrections %}
+  <section class="corrections">
+    <h2>정정 이력</h2>
+    <ul>{% for c in page.corrections %}<li><time>{{ c.date }}</time> — {{ c.note }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</article>
