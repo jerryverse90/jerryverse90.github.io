@@ -1,0 +1,44 @@
+:root{--bg:#F5F6F8;--surface:#fff;--ink:#1B2330;--muted:#5B6675;--rule:#D6DBE3;--accent:#C4731A;--accent-soft:#FBEEDD;--run:#2F7A5A;--run-soft:#E1F1E9;--warn:#B4423B;--warn-soft:#F8E4E2;--code:#EEF1F5}
+@media (prefers-color-scheme:dark){:root{--bg:#11161D;--surface:#181F29;--ink:#E6EAF0;--muted:#98A3B2;--rule:#2C3542;--accent:#E39C42;--accent-soft:#3A2A14;--run:#4FB086;--run-soft:#173428;--warn:#E06A62;--warn-soft:#3B1E1C;--code:#1F2833}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px;line-height:1.75}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.site-head{max-width:860px;margin:0 auto;padding:22px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
+.brand{font-weight:700;color:var(--ink);font-size:17px}
+.site-head nav{display:flex;gap:18px;align-items:center;font-size:14.5px}
+.site-head nav a{color:var(--muted)}
+.site-head nav a.cta{color:var(--accent);font-weight:600}
+.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:30px;line-height:1.3;margin:8px 0 12px;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:21px;margin:44px 0 10px;padding-left:18px;position:relative}
+h2::before{content:"";position:absolute;left:0;top:.75em;width:10px;height:2px;background:var(--accent)}
+h3{font-size:17px;margin:28px 0 8px}
+p{margin:0 0 16px}
+.meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);margin-bottom:28px}
+.badge{padding:1px 8px;border-radius:999px;border:1px solid var(--rule)}
+.badge.ok{color:var(--run);border-color:var(--run);background:var(--run-soft)}
+.badge.warn{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:14px 0 20px;font-variant-numeric:tabular-nums;display:block;overflow-x:auto}
+th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-size:12.5px;color:var(--muted);background:var(--surface);white-space:nowrap}
+pre,code{font-family:"IBM Plex Mono",monospace}
+code{background:var(--code);padding:1px 5px;border-radius:3px;font-size:.9em}
+pre{background:var(--code);padding:14px 16px;border-radius:6px;overflow-x:auto;font-size:13px;line-height:1.55}
+pre code{background:none;padding:0}
+figure{margin:22px 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px;overflow-x:auto}
+figure svg{display:block;width:100%;height:auto;min-width:640px}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+blockquote{margin:16px 0;padding:10px 16px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 6px 6px 0}
+.subscribe{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:48px 0 8px;padding:20px 22px;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+.subscribe p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.btn{display:inline-block;padding:10px 18px;background:var(--accent);color:#fff;border-radius:4px;font-weight:600;white-space:nowrap}
+.btn:hover{text-decoration:none;filter:brightness(.95)}
+.post-list{list-style:none;padding:0;margin:0}
+.post-list li{padding:18px 0;border-bottom:1px solid var(--rule)}
+.post-list .t{font-size:18px;font-weight:600;color:var(--ink)}
+.post-list .m{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);margin-top:4px}
+.site-foot{max-width:860px;margin:0 auto;padding:28px 20px 48px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+.disclosure{max-width:72ch}
+.corrections{margin-top:40px;font-size:14px;color:var(--muted)}
+@media (max-width:600px){h1{font-size:25px}.site-head nav{gap:12px;font-size:13.5px}}
